@@ -1,0 +1,20 @@
+{
+  "name": "andyshinn-remote_syslog2",
+  "version": "0.1.0",
+  "author": "andyshinn",
+  "summary": "Install and configure Papertrail's remote_syslog2 utility",
+  "license": "Apache 2.0",
+  "source": "https://github.com/andyshinn/puppet-remote_syslog2.git",
+  "project_page": "https://github.com/andyshinn/puppet-remote_syslog2",
+  "issues_url": "https://github.com/andyshinn/puppet-remote_syslog2/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 3.0.0"
+    },
+    {
+      "name": "maestrodev-wget",
+      "version_range": ">= 1.5.6"
+    }
+  ]
+}

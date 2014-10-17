@@ -1,0 +1,23 @@
+files:
+<% @files.each do |file| -%>
+  - <%= file %>
+<% end -%>
+<%- if @exclude_files != [] -%>
+exclude_files:
+<% @exclude_files.each do |exclude_file| -%>
+  - <%= exclude_file %>
+<% end -%>
+<% end -%>
+<% if @hostname -%>
+hostname: <%= @hostname %>
+<% end -%>
+<% if @exclude_patterns != [] -%>
+exclude_patterns:
+<% @exclude_patterns.each do |exclude_pattern| -%>
+  - <%= exclude_pattern %>
+<% end -%>
+<% end -%>
+destination:
+  host: <%= @destination_host %>
+  port: <%= @destination_port %>
+  protocol: <%= @destination_protocol %>

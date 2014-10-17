@@ -1,0 +1,9 @@
+description "Monitor file and send to remote syslog server"
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+
+pre-start exec /usr/bin/test -e <%= @config_file %>
+
+exec <%= @install_dir -%>/remote_syslog/remote_syslog -D -c <%= @config_file %>
